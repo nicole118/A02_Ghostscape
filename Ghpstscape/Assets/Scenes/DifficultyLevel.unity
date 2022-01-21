@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 155319312}
   - component: {fileID: 155319311}
   - component: {fileID: 155319310}
+  - component: {fileID: 155319313}
   m_Layer: 5
   m_Name: Easy
   m_TagString: Untagged
@@ -244,6 +245,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 155319308}
   m_CullTransparentMesh: 1
+--- !u!114 &155319313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155319308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7648b6030be8d44db1bbcfba8bacb50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &225233234
 GameObject:
   m_ObjectHideFlags: 0
@@ -575,6 +588,7 @@ GameObject:
   - component: {fileID: 1130217656}
   - component: {fileID: 1130217655}
   - component: {fileID: 1130217654}
+  - component: {fileID: 1130217658}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -665,6 +679,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1130217658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130217653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a85af8a2ebcc7cb43ba92342ab437b0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EasyButton: {fileID: 155319310}
+  DifficultButton: {fileID: 2000233624}
 --- !u!1 &1398856418
 GameObject:
   m_ObjectHideFlags: 0

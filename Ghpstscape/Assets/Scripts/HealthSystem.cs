@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HealthSystem : MonoBehaviour, ISubtractPlayerHealth
 {
@@ -20,6 +21,7 @@ public class HealthSystem : MonoBehaviour, ISubtractPlayerHealth
         if(isDead == true)
         {
             gameObject.SetActive(false);
+            SceneManager.LoadScene("LoseScene");
         }
     }
 

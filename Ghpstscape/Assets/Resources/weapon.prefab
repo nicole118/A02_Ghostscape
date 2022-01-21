@@ -10,7 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6766658499698596458}
   - component: {fileID: 6766658499698596460}
-  - component: {fileID: 6766658499698596459}
+  - component: {fileID: 4957013690470042668}
+  - component: {fileID: -4172217059917890265}
+  - component: {fileID: 3683696897366478493}
   m_Layer: 0
   m_Name: weapon
   m_TagString: Untagged
@@ -83,8 +85,29 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &6766658499698596459
-BoxCollider2D:
+--- !u!50 &4957013690470042668
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6766658499698596457}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 4
+--- !u!58 &-4172217059917890265
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -93,19 +116,22 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00000023841858, y: 0.008657992}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.8, y: 0.8}
-    newSize: {x: 0.8, y: 0.8}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: -0.0034690248, y: -0.004791733}
   serializedVersion: 2
-  m_Size: {x: 0.6614728, y: 0.6441556}
-  m_EdgeRadius: 0
+  m_Radius: 0.29937357
+--- !u!114 &3683696897366478493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6766658499698596457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3186d12423aeee64cae272ca086d1a9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dead: {fileID: 7400000, guid: bc7f4ea8defd1e54588cfd85b38512bb, type: 2}
