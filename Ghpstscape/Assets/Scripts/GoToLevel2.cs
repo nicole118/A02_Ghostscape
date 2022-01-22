@@ -12,25 +12,14 @@ public class GoToLevel2 : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        
+
         Level2Button.onClick.AddListener(ToLevel2);
 
     }
 
     private void ToLevel2()
     {
-        Scene currentScene = SceneManager.GetActiveScene();
-        string sceneName = currentScene.name;
-        Debug.Log(sceneName);
-        if (sceneName == "Level1")
-        {
-            SceneManager.LoadScene("Level2");
-        }
-
-        if(sceneName == "Level2")
-        {
-            SceneManager.LoadScene("ViewHighscore");
-        }
-
+        SceneManager.LoadScene("Level2");
+       
     }
 }

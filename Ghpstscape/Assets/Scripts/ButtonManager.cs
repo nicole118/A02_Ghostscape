@@ -8,8 +8,6 @@ public class ButtonManager : MonoBehaviour
 {
     [SerializeField] Button StartPlay, SetDifficulty, Highscore, HowToPlay;
 
-
-
     // Start is called before the first frame update
     private void Start()
     {

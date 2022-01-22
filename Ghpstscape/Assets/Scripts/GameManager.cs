@@ -15,8 +15,6 @@ public class GameManager : MonoBehaviour
     public Text ScoreText;
     public Text HighScoreText;
 
-    int highscore = 0;
-
     [SerializeField] GameObject playerPrefab;
 
     public static GameManager ManagerInstance;
@@ -36,6 +34,9 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameData.Score = 0;
+        GameData.Highscore = 0;
+        GameData.Hearts = 3;
         GameData.Highscore = PlayerPrefs.GetInt("highscore", 0);
         ScoreText.text = "Score: " + GameData.Score.ToString();
         
@@ -43,12 +44,14 @@ public class GameManager : MonoBehaviour
 
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (scene.name == "LoseScene" || scene.name == "WinScene" || scene.name == "ViewHighscore")
+        if (scene.name == "LoseScene" || scene.name == "WinScene")
         {
             if (GameData.Score > GameData.Highscore)
             {
                 GameData.Highscore = GameData.Score;
             }
+
+            GetComponent<SavingLoading>().SaveMyData();
 
             Text score = GameObject.Find("Score").GetComponent<Text>();
             score.text = "Score: " + GameData.Score.ToString();
@@ -57,13 +60,16 @@ public class GameManager : MonoBehaviour
             hScore.text = "High Score:" + GameData.Highscore.ToString();
         }
 
-        if(scene.name == "ViewHighscore")
+        if(scene.name == "ViewHighscore" ||  scene.name == "WinSceneLevel2")
         {
             if (GameData.Score > GameData.Highscore)
             {
                 GameData.Highscore = GameData.Score;
             }
+            GetComponent<SavingLoading>().SaveMyData();
 
+            Text score = GameObject.Find("Score").GetComponent<Text>();
+            score.text = "Score: " + GameData.Score.ToString();
             Text hScore = GameObject.Find("Highscore").GetComponent<Text>();
             hScore.text = "High Score:" + GameData.Highscore.ToString();
         }
@@ -76,7 +82,7 @@ public class GameManager : MonoBehaviour
         if(GameData.Highscore < GameData.Score)
         {
             PlayerPrefs.SetInt("highscore", GameData.Score);
-
+            GetComponent<SavingLoading>().SaveMyData();
         }
 
     }
