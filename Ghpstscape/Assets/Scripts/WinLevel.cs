@@ -4,12 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class WinLevel : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+{  
     public void OnTriggerEnter2D(Collider2D PlayerWins)
     {
 

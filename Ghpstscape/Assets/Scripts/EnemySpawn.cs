@@ -8,8 +8,6 @@ public class EnemySpawn : MonoBehaviour
     private GameObject enemy;
     private GameObject myEnemy;
 
-    //private Vector3 enemyPos;
-
 
     // Start is called before the first frame update
     private void Start()
