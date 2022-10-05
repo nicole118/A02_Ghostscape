@@ -5,6 +5,7 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
     public Transform firePoint;
+    public AudioClip shoot;
     private GameObject OrbPrefab;
 
     protected virtual void Start()
@@ -24,5 +25,6 @@ public class Weapon : MonoBehaviour
     private void ShootOrb()
     {
         Instantiate(OrbPrefab, firePoint.position, firePoint.rotation);
+        SoundManagerScript.PlaySound();
     }
 }
